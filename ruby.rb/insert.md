@@ -10,6 +10,8 @@ id,comment,created_at,updated_at
 全部で2000万行あります。実行後に以下のようになり、お渡ししているMySQLにインサートするようにしてみてください。
 
 >  testinsertwithruby ruby insert.rb 
+
+
 Finished inserting -1 rows
 Insert time: 388.158969644 seconds
 ＝＝＝＝＝＝＝＝＝
@@ -17,11 +19,8 @@ RDSの存在確認
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-エンドポイント
 
-*
-username:*
-password:*
+
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 Let's go!
