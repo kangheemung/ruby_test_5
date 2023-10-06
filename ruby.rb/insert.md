@@ -1,7 +1,7 @@
 今週の課題内容
 続いて次回までの課題ですが、お渡ししているCloud9の環境に以下ファイルを追加しました。
 
-takeast:~/environment $ head -n 4 testrecord.csv 
+takeast:~/environment $ head -n 4*.csv 
 id,comment,created_at,updated_at
 1,test comment 1,2023-09-04 14:42:16 +0900,2023-09-04 14:42:16 +0900
 2,test comment 2,2023-09-04 14:42:16 +0900,2023-09-04 14:42:16 +0900
@@ -19,9 +19,9 @@ RDSの存在確認
 
 エンドポイント
 
-testruby.cpf6ljmuy8gw.ap-northeast-1.rds.amazonaws.com
-username:admin
-password:password
+*
+username:*
+password:*
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 Let's go!
@@ -135,10 +135,10 @@ require 'mysql2'
 
 class Insert
   CLIENT = Mysql2::Client.new(
-    host: 'testruby.cpf6ljmuy8gw.ap-northeast-1.rds.amazonaws.com',
-    username: 'admin',
-    password: 'password',
-    database: 'inserts'
+    host: '*',
+    username: '*',
+    password: '*',
+    database: '*'
   )
 
   def self.insert_data(file_path)
@@ -161,7 +161,7 @@ class Insert
   end
 end
 
-file_path = '/home/ec2-user/environment/testrecord.csv'
+file_path = '/home/ec2-user/environment/*.csv'
 rows_inserted = Insert.insert_data(file_path)
 puts "Finished inserting #{rows_inserted} rows"
 takeast:~/environment/kang_lesson $ ruby insert.rb
